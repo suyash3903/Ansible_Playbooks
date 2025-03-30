@@ -1,0 +1,13 @@
+-
+  name: nginx Playbook
+  hosts: servers
+  become: yes
+  tasks:
+    - name: install nginx
+      state: latest
+
+    - name: start nginx
+      service: 
+        name: nginx
+        state: started
+        enabled: yes    

@@ -1,0 +1,6 @@
+-
+  name: time Playbook
+  hosts: servers
+  tasks:
+    - name: show time
+      command: time

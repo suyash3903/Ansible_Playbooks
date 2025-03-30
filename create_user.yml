@@ -1,0 +1,8 @@
+---
+- name: this playbook will create a user
+  hosts: all  #means on all connected servers
+  become: true #that means root user
+  tasks:
+  - name: to create a user name suyash
+    user: name=suyash
+

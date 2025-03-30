@@ -1,0 +1,6 @@
+-
+  name: Ram Playbook
+  hosts: servers
+  tasks:
+    - name: show free -h
+      command: free -h

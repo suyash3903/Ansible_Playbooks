@@ -1,0 +1,9 @@
+---
+- name: this playbook will create a file
+  hosts: all  #means on all connected servers
+  become: true #that means root user 
+  tasks:
+  - name: create a file
+    file: 
+      path: /home/ubuntu/suyash.txt
+      state: touch

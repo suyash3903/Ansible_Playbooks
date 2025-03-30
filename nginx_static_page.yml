@@ -1,0 +1,22 @@
+---
+- name: Nginx Playbook
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: latest
+      # Use `apt` module for Debian-based systems (e.g., Ubuntu) or `yum` for RHEL/CentOS
+
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy web page
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html  # Corrected to specify the full destination path
+

@@ -1,0 +1,9 @@
+-
+  name: hostname Playbook
+  hosts: servers
+  tasks:
+    - name: show hostname
+      command: hostname
+
+    - name: show hostname again
+      command: hostname
