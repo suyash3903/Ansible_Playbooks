@@ -1,0 +1,7 @@
+---
+   name: first Basic Playbook
+   hosts: localhost
+
+   tasks:
+   - name: Test Connectivity
+     ping:                         #ping is module

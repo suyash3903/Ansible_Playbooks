@@ -1,0 +1,10 @@
+---              #taking backup of files
+- name: copying files to remote            
+  hosts: all
+
+  tasks:
+  - name: copy files
+    copy:
+      src: /root/file.txt   #where the file exixt
+      dest: /tmp/    #where to transfer on remote server
+      backup: true        #it means even if u change anything in text file newly then it will create backup. even if u >> append new content
